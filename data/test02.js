@@ -1,7 +1,7 @@
 AGI.register({
   id: 2,
-  title: "Practice Test 2",
-  subtitle: "FAA-style questions across the AGI knowledge areas: regs, airspace, aero, systems, weather, performance, W&B, human factors",
+  title: "Test 2",
+  subtitle: "FAA-worded questions from 14 CFR, the AIM and FAA handbooks: mixed AGI knowledge areas",
   questions: [
     {"topic":"Regulations","q":"A ground instructor may not exercise the privileges of that certificate unless, within the preceding 12 calendar months, that person has","choices":["given at least 10 hours of ground training","completed a flight review","served for at least 3 months as a ground instructor"],"answer":2,"explain":"Ground instructor recent experience: within the preceding 12 calendar months, serve at least 3 months as a ground instructor, or receive an endorsement from an authorized instructor certifying proficiency.","ref":"14 CFR 61.217"},
     {"topic":"Regulations","q":"What is the minimum age to be issued a ground instructor certificate?","choices":["16 years","17 years","18 years"],"answer":2,"explain":"An applicant must be at least 18 years of age to be issued a ground instructor certificate (the knowledge test can be taken at 16).","ref":"14 CFR 61.213"},

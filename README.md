@@ -3,7 +3,7 @@
 A study platform for the FAA **Advanced Ground Instructor (AGI)** knowledge test. It has 10 tests of 100 multiple-choice questions each (A/B/C, one correct answer), with explanations and references.
 
 - **Test 1** contains the FAA's 100 published AGI sample questions, with answers and explanations. Nine of them need figures from the FAA testing supplement (FAA-CT-8080-5H), and the app shows which figure each one needs.
-- **Test 2** is a set of FAA-style practice questions covering the AGI knowledge areas.
+- **Tests 2–10** are 900 FAA-worded practice questions, 100 per test, each mixing the AGI knowledge areas (regulations, airspace, airport operations, aerodynamics, systems and instruments, performance, weight and balance, navigation, weather theory and services, human factors, maneuvers, rotorcraft and other categories, and fundamentals of instructing). Every answer cites 14 CFR, the AIM, or an FAA handbook. Calculations give all the data in the question, as the FAA does.
 
 The real AGI test has 100 questions, a 2.5-hour time limit and a 70% passing score. The exam mode here uses the same format.
 
@@ -42,8 +42,8 @@ css/style.css       styles (light + dark)
 js/registry.js      AGI.register() — question banks add themselves here
 js/app.js           the app: home, study/practice/exam, results, storage
 data/test01.js      Test 1: FAA AGI sample questions (100)
-data/test02.js      Test 2: FAA-style practice questions (100)
-data/test03.js …    Tests 3–10 (added as they're ready)
+data/test02.js …    Tests 2–10: FAA-worded practice questions (100 each)
+data/test10.js
 tools/validate.js   checks every bank: 100 questions, 3 choices, valid answer, explanation, no duplicates
 tools/balance-answers.js  spreads correct answers evenly across A/B/C
 tools/import-pdf-text.js  turns a Q&A PDF (pdftotext -layout output) into a test file
