@@ -116,6 +116,7 @@
         : `<span class="pill">${t.questions.length} Q</span>`;
       cards += `<div class="card">
         <div class="card-head"><h3>${esc(t.title)}</h3>${badge}</div>
+        ${t.source === "faa" ? `<span class="pill pill-faa">Official FAA questions</span>` : ""}
         <p class="muted">${esc(t.subtitle || "")}</p>
         ${sc ? `<p class="small muted">Last ${sc.last}% · ${sc.attempts} exam attempt${sc.attempts === 1 ? "" : "s"}</p>` : ""}
         <div class="btn-row">
@@ -231,6 +232,7 @@
         <div class="qcard">
           <div class="qmeta"><span class="pill">${esc(q.topic || "General")}</span><span class="muted small">${s.testId === undefined || s.mode === "missed" || s.mode === "marked" || s.testId === "all" ? `Test ${q.testId} · Q${q.n}` : `Q${q.n}`}</span></div>
           <p class="qtext">${esc(q.q)}</p>
+          ${q.figure ? `<div class="figure-note">📄 Needs <b>${esc(q.figure)}</b> (FAA Airman Knowledge Testing Supplement)${q.verify ? ". Chart-based answer: confirm it against the figure." : ""}</div>` : ""}
           <div class="choices">${choicesHtml}</div>
           ${feedback}
           ${explainHtml}

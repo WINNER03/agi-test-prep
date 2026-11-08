@@ -1,6 +1,9 @@
 # AGI Test Prep
 
-A study platform for the FAA **Advanced Ground Instructor (AGI)** knowledge test. It has 10 practice tests of 100 FAA-style multiple-choice questions each (A/B/C, one correct answer), with explanations and references.
+A study platform for the FAA **Advanced Ground Instructor (AGI)** knowledge test. It has 10 tests of 100 multiple-choice questions each (A/B/C, one correct answer), with explanations and references.
+
+- **Test 1** contains the FAA's 100 published AGI sample questions, with answers and explanations. Nine of them need figures from the FAA testing supplement (FAA-CT-8080-5H), and the app shows which figure each one needs.
+- **Test 2** is a set of FAA-style practice questions covering the AGI knowledge areas.
 
 The real AGI test has 100 questions, a 2.5-hour time limit and a 70% passing score. The exam mode here uses the same format.
 
@@ -38,10 +41,12 @@ index.html          page shell, loads every data/testNN.js
 css/style.css       styles (light + dark)
 js/registry.js      AGI.register() — question banks add themselves here
 js/app.js           the app: home, study/practice/exam, results, storage
-data/test01.js      Practice Test 1 (100 questions)
-data/test02.js …    Practice Tests 2–10 (added as they're written)
+data/test01.js      Test 1: FAA AGI sample questions (100)
+data/test02.js      Test 2: FAA-style practice questions (100)
+data/test03.js …    Tests 3–10 (added as they're ready)
 tools/validate.js   checks every bank: 100 questions, 3 choices, valid answer, explanation, no duplicates
 tools/balance-answers.js  spreads correct answers evenly across A/B/C
+tools/import-pdf-text.js  turns a Q&A PDF (pdftotext -layout output) into a test file
 ```
 
 ## Adding questions
@@ -74,4 +79,4 @@ node tools/validate.js
 
 ## Disclaimer
 
-These are original practice questions written in FAA style. They are not the FAA's test questions and are not affiliated with the FAA or any test-prep vendor. Regulations change, so confirm against the current 14 CFR, the AIM and FAA handbooks.
+Test 1 uses the FAA's public sample questions. The answers and explanations were added for this project, not by the FAA. The other tests are FAA-style practice questions. This project is not affiliated with the FAA or any test-prep vendor. Regulations change, so confirm against the current 14 CFR, the AIM and FAA handbooks.

@@ -150,3 +150,6 @@ button.choice:hover:not(:disabled) { border-color: var(--brand); }
   .qcard { padding: 16px; }
   .qtext { font-size: 1.05rem; }
 }
+
+.figure-note { margin: -6px 0 16px; padding: 8px 12px; border-radius: 6px; background: var(--warn-bg); color: var(--warn); font-size: 0.88rem; }
+.pill-faa { background: var(--sel-bg); color: var(--brand); border-color: transparent; }
