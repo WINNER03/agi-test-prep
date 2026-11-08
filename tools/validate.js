@@ -24,4 +24,11 @@ for (const t of Object.values(ctx.AGI.tests)) {
   console.log("  topics:", JSON.stringify(topics));
   if (t.questions.length !== 100) { ok = false; console.log(`  expected 100 questions`); }
 }
+// Near-duplicate check across all tests (word overlap of question stems)
+const all = Object.values(ctx.AGI.tests).flatMap((t) => t.questions.map((q) => ({ where: `Test ${t.id} Q${q.n}`, words: new Set(q.q.toLowerCase().match(/[a-z0-9]+/g)) })));
+for (let i = 0; i < all.length; i++) for (let j = i + 1; j < all.length; j++) {
+  const a = all[i].words, b = all[j].words; let inter = 0; a.forEach((w) => b.has(w) && inter++);
+  const sim = inter / (a.size + b.size - inter);
+  if (sim > 0.75) console.log(`  similar (${sim.toFixed(2)}): ${all[i].where} ~ ${all[j].where}`);
+}
 process.exit(ok ? 0 : 1);

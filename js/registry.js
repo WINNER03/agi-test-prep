@@ -17,3 +17,6 @@ window.AGI = {
     this.tests[test.id] = test;
   },
 };
+
+// Compact helper used by data files: AGI.q(topic, question, [A, B, C], answerIndex, explanation, reference)
+window.AGI.q = (topic, q, choices, answer, explain, ref) => ({ topic, q, choices, answer, explain, ref });
